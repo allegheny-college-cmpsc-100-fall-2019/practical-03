@@ -88,8 +88,6 @@ The Gator Wizard dropped his puzzle program and jumbled it up! (Foolish wizard.)
 
 Your task is to reassemble the program and make it work like new! The program contains:
 
-- [ ] Let's collect our pieces. In the `src/main/java/puzzle` folder, type `javac Pieces.java -d .` and press `Enter`.
-
 - [ ] Two (2) multi-line `Javadoc` comments that look like this:
 ```java
 /** {TEXT}
