@@ -1,6 +1,11 @@
 # CMPSC 100-03 Practical Session 3
 
 In this practical session, we will solve and assemble a puzzle within a puzzle with the goal of putting our Gator Wizard back together in ASCII form!
+
+* Assigned: Friday, 13 September 2019
+* Due: Monday, 16 September 2019
+* Point value: 10 points
+
 ## General guidelines for practical sessions
 
 * **Experiment!** We design practical sessions to create a space for you to _try things_. Given the expertise of our classroom TLs and my interest in fixing stuff, I am sure that even if something breaks, we can fix it.
@@ -22,6 +27,27 @@ In this practical session, we will solve and assemble a puzzle within a puzzle w
 - [ ] In your terminal window, type `eval "$(ssh-agent -s)"` and press `Enter` to start the SSH Agent `process`
 - [ ] Next, add your key. Type `ssh-add ~/.ssh/id_rsa`
 * You may need to provide your password.
+
+## A note on running applications
+
+As our applications get more and more complex, running them using `java` or compiling using `javac` will become untenable. From this point, I suggest:
+
+### Docker
+
+- [ ] For those of you using the `gatoreducator/dockagator` `container`, you can run `gradle run` in the command line of the container by first `mount`ing and running `/bin/bash` when you start the `container` like so:
+
+```
+docker run -it --mount type=bind,source="$(pwd)",target="/project" --hostname GatorGrader gatoreducator/dockagator /bin/bash
+```
+
+* Notice the `/bin/bash` at the end. Running the command without this piece causes the `container` to simply grade the `mount`ed project. Specifying a an additional command interrupts the process and runs a terminal session instead.
+
+-
+
+### `gradle` commands in terminal
+
+- [ ]In a terminal window, `cd` to the main directory of your repository and type `gradle run` and press the `Enter` key.
+* This simply runs the the project and displays any output programmed to display.
 
 ### Practicing file management
 
@@ -75,7 +101,7 @@ Your task is to reassemble the program and make it work like new! The program co
 - [ ] One (1) `main` method
 - [ ] Three (3) puzzle pieces (`Pieces` object methods) to reorder
 
-At his most glorious, he should look like this:
+At its most glorious, the Gator Wizard's puzzle should look like this:
 
 ```
                              ##/*###
@@ -96,18 +122,19 @@ At his most glorious, he should look like this:
 
 ### A little help from his friends
 
-Great! You've put the Gator Wizard's puzzle back together! He was in the middle of improving it when he dropped it (clumsy wizard) and he doesn't trust himself to hold it (no thumbs, after all).
+Great! You've put the Gator Wizard's puzzle back together! He was in the middle of improving the puzzle when he dropped it (clumsy wizard) and he doesn't trust himself to hold it (no thumbs, after all).
 
 He'd like you to:
 
-- [ ] Replace his `TODO` with an empty line followed by a caption of your choosing!
+- [ ] Replace his `TODO` with an empty line printed to the terminal followed by a caption of your choosing.
 * Try to center it with reference to Gator's picture.
+    * This may require some "trial and error" work with spacing on the left side of the string. (For those interested in terminology, space on either side of a string is referred to as `padding`.)
 
 ## Finished product
 
 A successful program will:
 
-- [ ] Be 16 lines
+- [ ] Output 15 lines
 - [ ] Contain no `{}` placeholders
 - [ ] Contain no `TODO` statements
 - [ ] Use _at most_:
