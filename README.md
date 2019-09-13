@@ -55,7 +55,7 @@ Could not make the Gator Wizard what he was before!
 
 The Gator Wizard dropped his puzzle program and jumbled it up! (Foolish wizard.) He needs your help to put it back together again.
 
-- [ ] Locate the source code in the repository's `src/main/java/puzzle` folder.
+- [ ] Locate the source code for `DisplayPuzzle.java` in the repository's `src/main/java/puzzle` folder.
 - [ ] Open it and survey the damage
 * It's quite jumbled, after all!
 
@@ -114,3 +114,36 @@ A successful program will:
     - [ ] 4 `System.out.println` statements
     - [ ] 1 `System.out.print` statement
 - [ ] Have 2 multi-line `Javadoc` comments
+
+## GatorGrader
+
+### Docker `container`
+
+If you do not already have the GatorGrader `container`, in a new terminal or Docker Quickstart Terminal, type `docker pull gatoreducator/dockagator` to download the correct `container`.
+
+In the last lab session, we were able to get Docker `container` versions of GatorGrader working! That means that everyone can choose to use the `container` if they'd like. Here are a couple of ways to do it:
+
+#### Running GatorGrader directly on `container` start
+
+* Be sure that you are in the main directory of your practicals repository when running these commands, or you'll certainly experience issues!
+* Remember that if you run `ls -la`, you should see a `.git` folder if you're in the main repository folder.
+* To make sure you're in the right repository, run a `pwd` command.
+    * If you recieve the expected path, you're in the right place. Else, find your way to the right location.
+
+```
+docker run -it --mount type=bind,source="$(pwd)",target="/project" --hostname GatorGrader gatoreducator/dockagator
+```
+
+#### Run `gradle` commands in the container`
+
+```
+docker run -it --mount type=bind,source="$(pwd)",target="/project" --hostname GatorGrader gatoreducator/dockagator /bin/bash
+```
+
+- [ ] To `build` your Java work, type `gradle build` at the `command` prompt and press the `Enter` key.
+- [ ] To `grade` your Java work, type `gradle grade` at the `command` prompt and press the `Enter` key.
+
+### Using `gradle` commands directly
+
+- [ ] In a terminal, ensure you're in the main folder of your practical repository and type `gradle build`
+- [ ] After the `command` completes successfully, type `gradle grade`
