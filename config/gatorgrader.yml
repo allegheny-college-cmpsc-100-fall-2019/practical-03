@@ -16,7 +16,7 @@ src/main:
             MatchFileRegex --regex "String body" --count 1 --exact
             MatchFileRegex --regex "String tailAndLegs" --count 1 --exact
         
-CountCommits --count 2
+CountCommits --count 10
 ExecuteCommand --command "gradle build"
 ExecuteCommand --command "gradle -q --console plain run" 
 CountCommandOutput --command "gradle -q --console plain run" --count 15

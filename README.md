@@ -90,6 +90,7 @@ Your task is to reassemble the program and make it work like new! The program co
 
 - [ ] Two (2) multi-line `Javadoc` comments that look like this:
 * For more on `Javadoc` comments, look at our book in **Appendix J**
+* If you'd like to look at a correctly-written program, either refer back to your previous exercises or take a peek at the `Pieces.java` file.
 - [ ] One (1) `import` statement which goes at the top.
 - [ ] One (1) `class` (object) declaration
 - [ ] One (1) `main` method
