@@ -19,6 +19,7 @@ In this practical session, we will solve and assemble a puzzle within a puzzle w
 * [Cloning your repository](#cloning-your-repository)
 * [Slack](#slack)
 * [Github](#github)
+* [Putting the Gator Wizard back together](#putting-the-gator-wizard-back-together)
 
 ## Cloning your repository
 
@@ -174,3 +175,13 @@ docker run -it --mount type=bind,source="$(pwd)",target="/project" --hostname Ga
 
 - [ ] In a terminal, ensure you're in the main folder of your practical repository and type `gradle build`
 - [ ] After the `command` completes successfully, type `gradle grade`
+
+## `commit` your work
+
+When you've finished your work: remember that there are three (3) steps to submitting a `git` repository: to "pack," to "label," and to "ship."
+
+* Note: attempt all of these from the main directory of the repository.
+
+- [ ] To "pack" the submission: `git add .`
+- [ ] To "label" the submission: `git commit -m "{ADD MESSAGE DESCRIPTING PURPOSE OF COMMIT HERE}"`
+- [ ] To "ship" the submission: `git push`
